@@ -10,50 +10,50 @@
     </div>
 
     <div class="mt-2 space-y-3">
-      <SidebarLeftTab active>
+      <SidebarLeftTab active :class="defaultTransition">
         <template v-slot:icon>
           <HomeIcon />
         </template>
         <template v-slot:name> Home </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <HashtagIcon />
         </template>
         <template v-slot:name> Explore </template>
       </SidebarLeftTab>
 
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <BellIcon />
         </template>
         <template v-slot:name> Notification </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <InboxIcon />
         </template>
         <template v-slot:name> Messages </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <BookmarkIcon />
         </template>
         <template v-slot:name> Bookmarks </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <DocumentTextIcon />
         </template>
         <template v-slot:name> Lists </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <UserIcon />
         </template>
         <template v-slot:name> Profile </template>
       </SidebarLeftTab>
-      <SidebarLeftTab>
+      <SidebarLeftTab :class="defaultTransition">
         <template v-slot:icon>
           <EllipsisHorizontalCircleIcon />
         </template>

@@ -6,13 +6,20 @@
           class="grid grid-cols-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:gap-5"
         >
           <!-- Left sidebar -->
-          <div class="md:block xs-col-span-1 xl:col-span-2">
+          <div class="hidden md:block xs-col-span-1 xl:col-span-2">
             <div class="sticky top-0"></div>
             <SidebarLeft />
           </div>
 
           <!-- Main sidebar -->
+          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
+            Main sidebar
+          </main>
           <!-- Rigth sidebar -->
+          <div class="hidden col-span-12 md:block md:col-span-3 xl:col:span-4">
+            <div class="sticky top-0"></div>
+            <SidebarRight />
+          </div>
         </div>
       </div>
     </div>
