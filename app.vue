@@ -12,8 +12,8 @@
           </div>
 
           <!-- Main sidebar -->
-          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-500">
-            Main sidebar
+          <main class="col-span-12 md:col-span-8 xl:col-span-6">
+            <router-view />
           </main>
           <!-- Rigth sidebar -->
           <div class="hidden col-span-12 md:block md:col-span-3 xl:col:span-4">
