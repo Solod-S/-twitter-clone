@@ -2,29 +2,29 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
+  provider             = "mongodb"
+  url                  = env("DATABASE_URL")
   referentialIntegrity = "prisma"
 }
 
 model User {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  email String 
-  name String?
-  // optional
-  username String @unique
-  password String
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  email        String
+  name         String?
+  username     String  @unique
+  password     String
   profileImage String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-    // Refresh token
+  // Refresh token
   refreshToken RefreshToken[]
+  // Tweet
+
 }
 
 model RefreshToken {
@@ -35,9 +35,3 @@ model RefreshToken {
   userId String @db.ObjectId
   user   User   @relation(fields: [userId], references: [id])
 }
-
-// npx prisma
-//npx prisma init
-// npx prisma db push
-//npx prisma generate
-
