@@ -18,6 +18,28 @@ const generateRefreshToken = (user) => {
   });
 };
 
+export const decodeRefreshToken = (token) => {
+  const config = useRuntimeConfig();
+
+  try {
+    return jwt.verify(token, config.jwtRefreshSecret);
+  } catch (error) {
+    return null;
+  }
+};
+//checking refresh token
+
+export const decodeAccessToken = (token) => {
+  const config = useRuntimeConfig();
+
+  try {
+    return jwt.verify(token, config.jwtAccessSecret);
+  } catch (error) {
+    return null;
+  }
+};
+//checking refresh token
+
 export const generateToken = (user) => {
   const accessToken = generateAccessToken(user);
   const refreshToken = generateRefreshToken(user);
@@ -33,3 +55,5 @@ export const sendRefreshToken = (event, token) => {
     sameSite: true,
   });
 };
+
+//save refresh token in cookies

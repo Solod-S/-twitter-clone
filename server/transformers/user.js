@@ -7,3 +7,4 @@ export const userTransformer = (user) => {
     profileImage: user.profileImage,
   };
 };
+//if we don't want to see any sensitive data to client

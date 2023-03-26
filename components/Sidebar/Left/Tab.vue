@@ -12,7 +12,6 @@
   ></nuxt-link>
 </template>
 <script setup>
-import useTailwindConfig from "../../composables/useTailwindConfig";
 //animation
 const { defaultTransition } = useTailwindConfig;
 const props = defineProps({ active: Boolean, default: false });

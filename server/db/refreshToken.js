@@ -14,3 +14,11 @@ export const createRefreshToken = (refreshToken) => {
   });
   return createdRefreshToken;
 };
+
+export const getRefreshTokenByToken = (token) => {
+  return prisma.refreshToken.findUnique({
+    where: {
+      token,
+    },
+  });
+};

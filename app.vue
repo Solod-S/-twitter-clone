@@ -1,8 +1,9 @@
 <template>
   <div :class="{ dark: darkMode }">
     <div class="bg-white dark:bg-dim-900">
+      <LoadingPage v-if="isAuthLoading" />
       <!-- App -->
-      <div v-if="user" class="min-h-full">
+      <div v-else-if="user" class="min-h-full">
         <div
           class="grid grid-cols-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:gap-5"
         >
@@ -30,9 +31,13 @@
   </div>
 </template>
 <script setup>
-import useAuth from "./components/composables/useAuth";
-const { useAuthUser } = useAuth();
+const { useAuthUser, initAuth, useAuthLoading } = useAuth();
 const user = useAuthUser();
 // from composables
+const isAuthLoading = useAuthLoading();
+
 const darkMode = ref(false);
+onBeforeMount(() => {
+  initAuth();
+});
 </script>

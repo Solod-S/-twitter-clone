@@ -21,8 +21,6 @@
   </div>
 </template>
 <script setup>
-import useAuth from "../composables/useAuth";
-
 const data = reactive({ password: "", username: "", loading: false });
 //saving values from input here
 

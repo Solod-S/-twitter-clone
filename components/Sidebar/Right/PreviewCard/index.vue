@@ -21,8 +21,6 @@
   </div>
 </template>
 <script setup>
-import useTailwindConfig from "../../../composables/useTailwindConfig";
-
 const { twitterBorderColor, defaultTransition } = useTailwindConfig();
 const props = defineProps({ title: { String, required: true } });
 </script>

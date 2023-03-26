@@ -64,7 +64,6 @@
 </template>
 
 <script setup>
-import useTailwindConfig from "../../composables/useTailwindConfig";
 import { HomeIcon } from "@heroicons/vue/24/solid";
 import {
   HashtagIcon,

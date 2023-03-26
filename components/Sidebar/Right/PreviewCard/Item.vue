@@ -7,8 +7,6 @@
   </div>
 </template>
 <script setup>
-import useTailwindConfig from "../../../composables/useTailwindConfig";
-
 const { twitterBorderColor, defaultTransition } = useTailwindConfig();
 
 const wrapperClasses = computed(
