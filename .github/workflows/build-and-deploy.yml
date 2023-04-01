@@ -27,7 +27,10 @@ jobs:
           npx prisma generate
           npm run generate
         env:
-          NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
+          NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL }}
+          DATABASE_URL: ${{ vars.DATABASE_URL }}
+          JWT_ACCESSTOKEN_SECRET: ${{ vars.JWT_ACCESSTOKEN_SECRET }}
+          JWT_REFRESHTOKEN_SECRET: ${{ vars.JWT_ACCESSTOKEN_SECRET }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
