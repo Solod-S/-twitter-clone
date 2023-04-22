@@ -1,4 +1,5 @@
 export const userTransformer = (user) => {
+  console.log(`user in transformer`, user);
   return {
     id: user.id,
     name: user.name,

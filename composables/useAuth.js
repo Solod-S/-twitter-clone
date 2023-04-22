@@ -83,6 +83,7 @@ export default () => {
     // 1) decoding token wich saved in memory
 
     const newRefreshTime = jwt.exp - 6000;
+
     //2)  taking exp (life time)
     setTimeout(async () => {
       await refreshToken(), reRefreshAccessToken();
