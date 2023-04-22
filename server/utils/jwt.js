@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 const generateAccessToken = (user) => {
   const config = useRuntimeConfig();
-  // acces to nuxtconfig
+  // acces to nuxtconfig .env
 
   return jwt.sign({ userId: user.id }, config.jwtAccessSecret, {
     expiresIn: "59m",
@@ -11,7 +11,7 @@ const generateAccessToken = (user) => {
 
 const generateRefreshToken = (user) => {
   const config = useRuntimeConfig();
-  // acces to nuxtconfig
+  // acces to nuxtconfig .env
 
   return jwt.sign({ userId: user.id }, config.jwtRefreshSecret, {
     expiresIn: "4h",
@@ -20,7 +20,7 @@ const generateRefreshToken = (user) => {
 
 export const decodeRefreshToken = (token) => {
   const config = useRuntimeConfig();
-
+  // acces to nuxtconfig .env
   try {
     return jwt.verify(token, config.jwtRefreshSecret);
   } catch (error) {
@@ -31,7 +31,7 @@ export const decodeRefreshToken = (token) => {
 
 export const decodeAccessToken = (token) => {
   const config = useRuntimeConfig();
-
+  // acces to nuxtconfig .env
   try {
     return jwt.verify(token, config.jwtAccessSecret);
   } catch (error) {
