@@ -120,7 +120,10 @@
 
       <div class="ml-auto">
         <div>
-          <button @click="handleFormSubmit">Tweet</button>
+          <UIButton size="sm" :disabled="isDisabled" @onClick="handleFormSubmit"
+            ><span class="font-bold">Tweet</span></UIButton
+          >
+          <!-- <button @click="handleFormSubmit">Tweet</button> -->
         </div>
       </div>
     </div>
@@ -141,6 +144,7 @@ const emits = defineEmits(["on-submit"]);
 // look at TweetForm coponent @on-submit="handleFormSubmit"
 
 const isDisabled = computed(() => text.value === "");
+// <UIButton size="sm" :disabled="isDisabled" if value === "" button disabled
 const props = defineProps({
   user: {
     type: Object,

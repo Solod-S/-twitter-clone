@@ -9,7 +9,21 @@ export default () => {
     // preparing media file
     return useFetchApi("api/user/tweets", { method: "POST", body: form });
   };
+
+  const getHomeTweets = () => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const response = await useFetchApi("/api/tweets", { method: "GET" });
+
+        resolve(response);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  };
+
   return {
     postTweet,
+    getHomeTweets,
   };
 };

@@ -55,6 +55,8 @@ model Tweet {
   // MediaFiles
   mediaFiles MediaFile[]
 }
+// replies parameter that shows a subcollection of replies to this tweet
+// replyTo parameter that shows to witch tweet replies  this tweet
 
 model MediaFile {
   id               String @id @default(auto()) @map("_id") @db.ObjectId

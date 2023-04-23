@@ -4,7 +4,7 @@ import { sendError } from "h3";
 import { getUserById } from "../db/users";
 
 export default defineEventHandler(async (event) => {
-  const endpoints = ["/api/auth/user", "/api/user/tweets"];
+  const endpoints = ["/api/auth/user", "/api/user/tweets", "/api/tweets"];
   // define in which endpoints we wanted to use this
   const isHandledByThisMiddleware = endpoints.some((endopoint) => {
     const pattern = new UrlPattern(endopoint);

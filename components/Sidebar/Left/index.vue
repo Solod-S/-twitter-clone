@@ -9,7 +9,7 @@
       </nuxt-link>
     </div>
 
-    <div class="mt-2 space-y-3">
+    <div class="mt-2 space-y-3 mb-5">
       <SidebarLeftTab active :class="defaultTransition">
         <template v-slot:icon>
           <HomeIcon />
@@ -60,6 +60,14 @@
         <template v-slot:name> More </template>
       </SidebarLeftTab>
     </div>
+    <div class="hidden xl:block">
+      <UIButton liquid size="lg"><span class="font-bold">Tweet</span></UIButton>
+    </div>
+    <div class="block xl:hidden">
+      <UIButton>
+        <div class="w-6 h-6 font-bold"><PencilIcon /></div>
+      </UIButton>
+    </div>
   </div>
 </template>
 
@@ -73,6 +81,7 @@ import {
   DocumentTextIcon,
   UserIcon,
   EllipsisHorizontalCircleIcon,
+  PencilIcon,
 } from "@heroicons/vue/24/outline";
 // const transition = "transition ease-in-out duration-1";
 const { defaultTransition } = useTailwindConfig();
